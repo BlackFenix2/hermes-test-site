@@ -1,0 +1,11 @@
+.vercel
+
+# Ignore all dotfolders in the root, then whitelist specific ones
+*/
+!/.git/
+!/.claude/
+
+# Now, inside .claude, ignore everything except the skills directory
+.claude/**/*
+!/.claude/skills/
+!/.claude/skills/**/
