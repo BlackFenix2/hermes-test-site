@@ -1,42 +1,134 @@
-/* Basic styling for the landing page */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+/* Reset and base styles */
+* {
     margin: 0;
     padding: 0;
-    color: #333;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+    color: #222;
+    background-color: #fff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 header {
-    background: #333;
-    color: #fff;
-    padding: 2rem;
+    padding: 4rem 0 2rem;
     text-align: center;
 }
 
 header h1 {
-    margin: 0;
+    font-family: 'Instrument Serif', serif;
     font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+    line-height: 1.2;
 }
 
 header p {
-    margin: 0.5rem 0 0;
-    font-size: 1.2rem;
+    font-size: 1.125rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.about {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-    background: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 3rem 0;
 }
 
-.about h2 {
-    margin-top: 0;
+.content-section {
+    padding: 3rem 0;
 }
 
-.about p {
-    margin: 0.5rem 0;
+.content-section h2 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #1a1a1a;
+    position: relative;
+    display: inline-block;
+}
+
+.content-section h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    height: 3px;
+    width: 50px;
+    background: #0066cc;
+}
+
+.content-section p {
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+    color: #444;
+}
+
+.content-section ul {
+    list-style: none;
+}
+
+.content-section li {
+    margin-bottom: 1rem;
+}
+
+.content-section a.link {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.content-section a.link:hover {
+    border-color: #0066cc;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .content-section h2 {
+        font-size: 1.75rem;
+    }
+    
+    .container {
+        padding: 0 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.75rem;
+    }
+    
+    .content-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    header {
+        padding: 3rem 0 1.5rem;
+    }
+    
+    .content-section {
+        padding: 2rem 0;
+    }
 }
